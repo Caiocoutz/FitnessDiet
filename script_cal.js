@@ -3,6 +3,7 @@ const balanceDisplay = document.querySelector('#balance')
 const form = document.querySelector('#form')
 const inputTransactionName = document.querySelector('#text')
 const inputTransactionAmount = document.querySelector('#amount')
+var total
 
 let dummyTransactions = [
     {id: 1, name: 'Bolo de brigadeiro', amount: 20},
@@ -35,7 +36,7 @@ const addTransactionIntoDOM = transaction => {
 
 const updateBalanceValues = () => {
     const transactionsAmounts = dummyTransactions.map(transaction => transaction.amount)
-    const total = transactionsAmounts.reduce((accumulator, transaction) => accumulator + transaction, 0)
+    total = transactionsAmounts.reduce((accumulator, transaction) => accumulator + transaction, 0)
     
     balanceDisplay.textContent = `${total} kcal`
 }
@@ -72,4 +73,12 @@ form.addEventListener('submit', event => {
 
     inputTransactionName.value = ''
     inputTransactionAmount.value = ''
+
+    console.log('teste');
+
+    fetch(`contCal.php?total=${total}`)
+    .then((response) => {
+        console.log(response)
+        return response;
+    })
 })

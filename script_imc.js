@@ -42,6 +42,14 @@ function handleSubmit(event) {
   const result = document.getElementById('result');
 
   result.innerHTML = layout;
+
+  console.log('teste');
+
+  fetch(`imcdb.php?tmb=${tmb}&maintenance=${maintenance}&loseWeight=${loseWeight}&gainWeight=${gainWeight}`)
+  .then((response) => {
+    console.log(response)
+    return response;
+  })
 }
 
 function getSelectedValue(id) {

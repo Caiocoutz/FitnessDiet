@@ -8,12 +8,45 @@
     <script src="https://kit.fontawesome.com/15dcada156.js" crossorigin="anonymous"></script>
     <title>Sobre nós</title>
     <style>
+
+        
+        @media(min-width: 1025px) {
+            .photo {
+                width: 367px;   
+                height: 535px   ;
+            }
+
+            .navbar {
+                width: 400px;
+                margin: auto;
+            
+            }
+
+        .actions {
+            display: flex;
+            flex: auto;
+            align-items: center;
+            margin: 1rem 0;
+        }
+
+        .action {
+            background: #fff;
+            box-shadow: 0 2px 6px 0 rgba(112, 125, 134, 0.14);
+            height: 60px;
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 2rem;
+        }
+
 		.whatsapp-link {
 			position: fixed;
-			width: 60px;
-			height: 60px;
-			bottom: 40px;
-			right: 40px;
+			width: 50px;
+			height: 50px;
+			bottom: 15px;
+			right: 650px;
 			background-color: #25d366;
 			color: #fff;
 			border-radius: 50px;
@@ -24,7 +57,7 @@
 		}
  
 		.fa-whatsapp {
-			margin-top: 16px;
+			margin-top: 10px;
 		}
 	</style>
 </head>
@@ -49,14 +82,6 @@
         </div>
 
         <div class="actions">
-            <div class="action">
-                <i class="fas fa-times"></i>
-            </div>
-
-            <div class="action">
-                <i class="fas fa-heart">
-                </i>
-            </div>
                 <a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=5519999246872" target="_blank">
                      <i class="fa fa-whatsapp"></i>
                 </a>
